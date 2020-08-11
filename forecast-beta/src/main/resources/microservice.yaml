@@ -1,8 +1,7 @@
 APPLICATION_ID: weathermap
 service_description:
-  name: weather
+  name: forecast
   version: 0.0.3
-  description: Beta version of weather service (including UV panel display).
   properties:
     allowCrossApp: false
 mock:
@@ -30,7 +29,7 @@ cse:
       refresh_interval: 5000
 
   rest:
-    address: 0.0.0.0:13093
+    address: 0.0.0.0:13091
   handler:
     chain:
       Provider:
@@ -45,5 +44,5 @@ cse:
 #    secretKey: yoursk
 #    akskCustomCipher: default
 #    project: cn-north-1
-#addressResolver:   ## If failed with unable to resolve domain name in windows, you can resolve it by set addressResolver.x
+#addressResolver:   ## If failed with unable to resolve domain name in windows, you can resolve it by set addressResolver.
 #  servers: 8.8.8.8

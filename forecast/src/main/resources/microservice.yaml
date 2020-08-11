@@ -4,20 +4,29 @@ service_description:
   version: 0.0.2
   properties:
     allowCrossApp: false
+mock:
+  enabled: ${MOCK_ENABLED:false}
+proxy:
+  enabled: false
+  host: proxyhost
+  port: 8080
+  user: xx
+  password: xx
+rest:
+  readtimeout: 15000
+  connecttimeout: 10000
+
 cse:
   service:
     registry:
-      address: https://cse.cn-north-1.myhuaweicloud.com:443
+      address: http://127.0.0.1:30100
       instance:
         watch: false
   config:
     client:
-      serverUri: https://cse.cn-north-1.myhuaweicloud.com:443
+      serverUri: http://127.0.0.1:30113
       refreshMode: 1
       refresh_interval: 5000
-  monitor:
-    client:
-      serverUri: https://cse.cn-north-1.myhuaweicloud.com:443
   rest:
     address: 0.0.0.0:13091
   handler:

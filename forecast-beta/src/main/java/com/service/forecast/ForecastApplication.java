@@ -5,7 +5,7 @@ import org.apache.servicecomb.foundation.common.utils.Log4jUtils;
 
 public class ForecastApplication {
 
-    public static void main(String[] args) {
-        BeanUtils.init();
-    }
+  public static void main(String[] args) {
+    BeanUtils.init();
+  }
 }

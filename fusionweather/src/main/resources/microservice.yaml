@@ -7,17 +7,14 @@ service_description:
 cse:
   service:
     registry:
-      address: https://cse.cn-north-1.myhuaweicloud.com:443
+      address: http://127.0.0.1:30100
       instance:
         watch: false
   config:
     client:
-      serverUri: https://cse.cn-north-1.myhuaweicloud.com:443
+      serverUri: http://127.0.0.1:30113
       refreshMode: 1
       refresh_interval: 5000
-  monitor:
-    client:
-      serverUri: https://cse.cn-north-1.myhuaweicloud.com:443
   rest:
     address: 0.0.0.0:13092
   request:
@@ -46,3 +43,24 @@ servicecomb:
       instance:
         empty:
           protection: false
+  router:
+    type: router
+  routeRule:
+    weather: |
+      - precedence: 1
+        route:
+          - weight: 80
+            tags:
+              version: 0.0.3
+          - weight: 20
+            tags:
+              version: 0.0.2
+    forecast: |
+      - precedence: 1
+        route:
+          - weight: 80
+            tags:
+              version: 0.0.3
+          - weight: 20
+            tags:
+              version: 0.0.2

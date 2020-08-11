@@ -10,7 +10,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<cse.version>2.3.56</cse.version>
+		<cse.version>3.1.0</cse.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
@@ -21,7 +21,8 @@
 		<module>fusionweather</module>
 		<module>weather-beta</module>
 		<module>edge</module>
-	</modules>
+    <module>forecast-beta</module>
+  </modules>
 
 	<build>
 

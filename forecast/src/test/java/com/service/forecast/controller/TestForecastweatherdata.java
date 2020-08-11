@@ -20,11 +20,6 @@ public class TestForecastweatherdata {
 
     private OpenWeatherMapClient openWeatherMapClient = new OpenWeatherMapClient();
 
-    @Before
-    public void setUp() throws Exception {
-        Log4jUtils.init();
-    }
-
     @Test
     public void testMockData() throws Exception {
         System.out.println("unit test for the forecast mock data");
