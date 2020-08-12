@@ -14,7 +14,7 @@ import java.util.Map;
 
 public class EdgeDispatcher extends AbstractEdgeDispatcher {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(AuthFilter.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(DemoFilter.class);
 
     @Override
     public int getOrder() {

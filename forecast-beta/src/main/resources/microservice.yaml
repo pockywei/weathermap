@@ -33,7 +33,7 @@ cse:
   handler:
     chain:
       Provider:
-        default: qps-flowcontrol-provider,bizkeeper-provider,auth-provider
+        default: qps-flowcontrol-provider,bizkeeper-provider
       Consumer:
         default: qps-flowcontrol-consumer,loadbalance,fault-injection-consumer,bizkeeper-consumer
   accesslog:

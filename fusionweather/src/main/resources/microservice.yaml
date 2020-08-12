@@ -24,7 +24,7 @@ cse:
       Provider:
         default: qps-flowcontrol-provider,bizkeeper-provider
       Consumer:
-        default: qps-flowcontrol-consumer,loadbalance,bizkeeper-consumer,fault-injection-consumer,auth-consumer
+        default: qps-flowcontrol-consumer,loadbalance,bizkeeper-consumer,fault-injection-consumer
   accesslog:
     enabled: true
     pattern: "%h %{dd/MMM/yyyy:HH:mm:ss.SSSZ|GMT+0008|en_US}t %r %s %B %D"
@@ -45,22 +45,3 @@ servicecomb:
           protection: false
   router:
     type: router
-  routeRule:
-    weather: |
-      - precedence: 1
-        route:
-          - weight: 80
-            tags:
-              version: 0.0.3
-          - weight: 20
-            tags:
-              version: 0.0.2
-    forecast: |
-      - precedence: 1
-        route:
-          - weight: 80
-            tags:
-              version: 0.0.3
-          - weight: 20
-            tags:
-              version: 0.0.2

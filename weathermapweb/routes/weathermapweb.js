@@ -6,7 +6,7 @@ var router = express.Router();
 router.get('/', function (req, res, next) {
     var proxy_host = process.env.HTTP_PROXY_HOST || '127.0.0.1';
     var proxy_port = process.env.HTTP_PROXY_PORT || '30101'; // 13092
-    var service_addr = process.env.SERVICE_ADDR || 'fusionweather'
+    var service_addr = process.env.SERVICE_ADDR || 'edge/api/fusionweather'
     console.log(proxy_host + ':' + proxy_port);
     console.log(req.query.city + ", " + req.query.type);
     var opt = {

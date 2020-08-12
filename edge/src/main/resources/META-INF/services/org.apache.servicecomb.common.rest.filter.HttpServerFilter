@@ -15,4 +15,4 @@
 # limitations under the License.
 #
 
-com.service.edge.AuthFilter
+com.service.edge.DemoFilter
